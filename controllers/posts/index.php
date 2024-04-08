@@ -1,0 +1,22 @@
+<?php
+// Dabūt datus no datu bāzes un izvadīt tos HTML
+$config = require "config.php";
+require "Database.php";
+
+
+$db = new Database($config);
+
+$query_string = "SELECT * FROM posts";
+$params = [];
+if (isset($_GET["id"]) && $_GET["id"] != "") {
+  // .= paņem iepriekšējo vērtību un pieliek WHERE klāt 
+  $query_string .= " WHERE id=:id";
+  $params[":id"] = $_GET["id"];
+} 
+
+$posts = $db->execute($query_string, $params)->fetchAll();
+
+
+$page_title = "Posts";
+
+require "views/posts/index.view.php";
