@@ -6,17 +6,17 @@ require "Database.php";
 
 $db = new Database($config);
 
-$query_string = "SELECT * FROM posts";
+$query_string = "SELECT * FROM fruits";
 $params = [];
-if (isset($_GET["id"]) && $_GET["id"] != "") {
+if (isset($_GET["calories"]) && $_GET["calories"] != "") {
   // .= paņem iepriekšējo vērtību un pieliek WHERE klāt 
-  $query_string .= " WHERE id=:id";
-  $params[":id"] = $_GET["id"];
+  $query_string .= " WHERE calories=:calories";
+  $params[":calories"] = $_GET["calories"];
 } 
 
 $posts = $db->execute($query_string, $params)->fetchAll();
 
 
-$page_title = "Posts";
+$page_title = "";
 
-require "views/posts/index.view.php";
+require "views/fruits/index.view.php";

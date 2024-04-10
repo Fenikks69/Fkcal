@@ -1,10 +1,8 @@
 <?php
 
 return [
-  "/" => "controllers/posts/index.php",
-  "/create" => "controllers/posts/create.php",
-  "/delete" => "controllers/posts/delete.php",
-  "/show" => "controllers/posts/show.php",
-  "/about" => "controllers/about.php",
-  "/story" => "controllers/story.php"
+  "/" => "controllers/fruits/index.php",
+  "/create" => "controllers/fruits/create.php",
+  "/delete" => "controllers/fruits/delete.php",
+  "/show" => "controllers/fruits/show.php"
 ];
