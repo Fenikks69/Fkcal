@@ -23,7 +23,4 @@
 </form>
 
 
-
-$page_title = 
-
 <?php require "views/components/footer.php" ?>

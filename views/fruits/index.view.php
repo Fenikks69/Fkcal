@@ -6,7 +6,7 @@
 <form>
 Calories less than...
   <input name='calories'/>
-  <button>Filter by ID</button>
+  <button>Filter</button>
 </form>
 
 <ol>
@@ -14,8 +14,8 @@ Calories less than...
   <ul>
     <a href="/show?id=<?= $post["id"] ?>"><?= htmlspecialchars($post["fruit_name"]) ?></a>
     <form class="delete-form" method="POST" action="/delete">
-      <input type="hidden" name="id" value="<?= $post["id"] ?>" />
-      <button>&times;</button>
+      <input type="hidden" name="id" value="<?= $post["id"] ?>"  />  
+      <button>delete</button>
     </form>
   </ul>
 <?php } ?>

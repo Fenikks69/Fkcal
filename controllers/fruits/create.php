@@ -38,5 +38,5 @@ $db -> execute($query, $params);
 
 
 
-$title = "Create a fruit";
+$page_title = "create a fruit";
 require "views/fruits/create.view.php";
